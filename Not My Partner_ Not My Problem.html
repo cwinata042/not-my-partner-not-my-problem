@@ -9,7 +9,7 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play Not My Partner, Not My Problem.</tw-noscript></noscript></tw-story>
-<tw-storydata name="Not My Partner, Not My Problem" startnode="1" creator="Twine" creator-version="2.7.1" format="Harlowe" format-version="3.3.7" ifid="2FAF8E0F-6A27-44B0-859E-95E57B2747D9" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
+<tw-storydata name="Not My Partner, Not My Problem" startnode="1" creator="Twine" creator-version="2.7.1" format="Harlowe" format-version="3.3.7" ifid="2FAF8E0F-6A27-44B0-859E-95E57B2747D9" options="" tags="" zoom="0.6" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
 
 tw-story {
@@ -81,20 +81,20 @@ You turn to reply to Detective Ai&#39;s question.
 
 You are beginning to understand why they assigned you to Detective Ai. Why take care of one problem when you can take care of two?
 
-You remind yourself that this is your chance to prove to the others that &#39;&#39;you don&#39;t need to rely on others&#39;&#39;. You find it hard to trust anyone after all, especially after your mother abandoned you in that &#39;&#39;hellhole&#39;&#39; of a foster care.
+You remind yourself that this is your chance to prove to the others that &#39;&#39;you don&#39;t need to rely on others&#39;&#39;. You find it hard to trust anyone at all, especially after your own mother abandoned you in that &#39;&#39;hellhole&#39;&#39; of a foster care.
 
 The manila folder sits on your desk, inviting you to open it and [[start investigating|Choose Case]].</tw-passagedata><tw-passagedata pid="9" name="Choose Case" tags="" position="1825,500" size="100,100">A hand shoots out to (link:&quot;stop you.&quot;)[stop you.
 
 (text-colour:#FFC7E2)[&quot;This is for that thief&#39;s case, right? Why don&#39;t we skip the boring stuff and start thinking like a thief?&quot;]
 
-You (link:&quot;blankly stare at Ai.&quot;)[blankly stare at Detective Ai.
+You (link:&quot;blankly stare at Detective Ai.&quot;)[blankly stare at Detective Ai.
 
 (text-colour:#FFC7E2)[&quot;Look, Shima, don&#39;t they do that in detective stories? Put yourself into the metaphorical boots of the thief and figure out their plan that way?&quot;]
 
 (text-colour:#C7F9FF)[//&#39;Is this woman crazy or stupid?//]
 
 -[[Disagree and explain that this isn&#39;t a detective story|Investigation A]]
--[[Let Detective Ai do her thing despite the voices in your head|Investigation B]]]]</tw-passagedata><tw-passagedata pid="10" name="Investigation B" tags="" position="1075,1150" size="100,100">(set: $talkCount to 0)(set: $security to false)(set: $exhibitWorker to false)(set: $artist to false)(set:$friendship to $friendship + 1)(text-colour:#C7F9FF)[&quot;Fine, then what should we do, Genius Detective Ai?&quot;]
+-[[Let Detective Ai do her thing despite the voices in your head|Investigation B]]]]</tw-passagedata><tw-passagedata pid="10" name="Investigation B" tags="" position="1075,1150" size="100,100">(set: $talkCount to 0)(set: $security to false)(set: $exhibitWorker to false)(set: $artist to false)(set: $artistTalk to false)(set:$auctionNight to false)(set:$friendship to $friendship + 1)(text-colour:#C7F9FF)[&quot;Fine, then what should we do, Genius Detective Ai?&quot;]
 
 Beaming proudly at her newfound title, Detective Ai takes off her sunglasses, doing a hair flip in the process.
 
@@ -124,39 +124,143 @@ To your right is a [[security guard|Security Guard]] talking to one of the [[exh
 (else-if:$talkCount &lt; 2)
 [In the back stands the (if: $security)[security guard, who you have already talked to](else:)[[[security guard|Security Guard]]]. The (if:$exhibitWorker)[exhibit worker](else:)[[[exhibit worker|Exhibit Worker]]] is still examining the painting, and (if:$artist)[the artist](else:)[a [[woman|Artist]]] stands in front of a vase, admiring it from a distance.]
 (else:)
-[As much as you want to talk to everyone, Detective Ai returns from the exhibit, waving wildly at you as if you hadn&#39;t already spotted her.
+[In the corner of your eye, you spot Detective Ai returning from the exhibit, waving wildly at you as if you hadn&#39;t already spotted her.
 &lt;br&gt;&lt;br&gt;
-]
+(text-colour:#FFC7E2)[&quot;Shima, great news! The guy from the exhibit said we could take a peek [[behind the scenes|Security Room]]!&quot;]]
 }</tw-passagedata><tw-passagedata pid="14" name="Security Guard" tags="" position="1450,1050" size="100,100">(set: $talkCount to $talkCount + 1)(set:$security to true)As you approach the security guard, he eyes you suspiciously before seeing the detective badge on your person.
 
 (text-colour:#D5FFC7)[&quot;What is a detective doing here? Did something happen, Miss?&quot;]
 
 -[[&#39;No, I am just looking around.&#39;|Security Guard 2-1]]
--[[&#39;Actually, I&#39;m here to plan a fake heist.&#39;|Security Guard 2-2]]</tw-passagedata><tw-passagedata pid="15" name="Exhibit Worker" tags="" position="1450,1150" size="100,100">(set: $talkCount to $talkCount + 1)
-***Find out about the artist talk and learn about the other vase</tw-passagedata><tw-passagedata pid="16" name="Artist" tags="" position="1450,1250" size="100,100">(set: $talkCount to $talkCount + 1)
-Learn about how expensive the vase is</tw-passagedata><tw-passagedata pid="17" name="Security Guard 2-1" tags="" position="1575,950" size="100,100">(text-colour:#C7F9FF)[&quot;No, I am just looking around.&quot;]
+-[[&#39;Actually, I&#39;m here to plan a fake heist.&#39;|Security Guard 2-2]]</tw-passagedata><tw-passagedata pid="15" name="Exhibit Worker" tags="" position="1450,1150" size="100,100">{(set: $talkCount to $talkCount + 1)The exhibit worker is busy adjusting the namecard beneath a painting, but he turns around when you get closer.
+&lt;br&gt;&lt;br&gt;
+(text-colour:#D5FFC7)[&quot;Hello, how can I help you?&quot;]
+&lt;br&gt;&lt;br&gt;
+(link:&quot;-&#39;Are there any events going on today?&#39;&quot;)[
+(set: $artistTalk to true)
+(text-colour:#C7F9FF)[&quot;Are there any events going on today?&quot;]
+&lt;br&gt;&lt;br&gt;
+(text-colour:#D5FFC7)[&quot;I&#39;m glad you asked! We have an artist talk going on tonight with the artist over there. She&#39;s the one who made that beautiful vase!&quot;]
+&lt;br&gt;&lt;br&gt;
+The exhibit worker gestures towards the [[woman|Artist]] you saw observing the vase earlier.
+&lt;br&gt;&lt;br&gt;
+(text-colour:#D5FFC7)[&quot;You should go if you are interested in learning more about her creation process!&quot;]&lt;br&gt;]
+&lt;br&gt;(link:&quot;-&#39;Have there been cases where artwork was stolen?&#39;&quot;)[
+&lt;br&gt;(text-colour:#C7F9FF)[&quot;Have there been cases where artwork was stolen?&quot;]
+&lt;br&gt;&lt;br&gt;
+(text-colour:#D5FFC7)[&quot;Stolen? Yes, I believe there was an incident in the past, but we discovered the painting was missing before they could escape.&quot;]
+]}</tw-passagedata><tw-passagedata pid="16" name="Artist" tags="" position="1450,1250" size="100,100">(set: $talkCount to $talkCount + 1)The (if:$artistTalk)[artist](else:)[woman] is too occupied with the vase to notice your presence.
 
-The security guard nods, and you return to looking around the [[museum|Museum]].</tw-passagedata><tw-passagedata pid="18" name="Security Guard 2-2" tags="" position="1575,1050" size="100,100">(text-colour:#C7F9FF)[&quot;Actually, I&#39;m here to plan a fake heist.&quot;]
+-[[Interrupt her anyways|Artist 2-1]]
+-[[Leave her alone|Museum]]</tw-passagedata><tw-passagedata pid="17" name="Security Guard 2-1" tags="" position="1575,950" size="100,100">(text-colour:#C7F9FF)[&quot;No, I am just looking around.&quot;]
+
+The security guard nods, and you return to looking around the [[museum|Museum]].</tw-passagedata><tw-passagedata pid="18" name="Security Guard 2-2" tags="" position="1575,1050" size="100,100">(set:$auctionNight to true)(text-colour:#C7F9FF)[&quot;Actually, I&#39;m here to plan a fake heist.&quot;]
 
 The security guard lets out a laugh at the absurdity of the idea.
 
-(text-colour:#D5FFC7)[&quot;Well, if you are, I wouldn&#39;t go after that vase if I were you. Security will be extra tight on auction night.&quot;]
+(text-colour:#D5FFC7)[&quot;Well, if you are, I wouldn&#39;t go after that vase if I were you. Security will be extra tight on auction night tomorrow.&quot;]
 
-You smile politely, keeping the guard&#39;s words in mind before returning to look around the [[museum|Museum]].</tw-passagedata><tw-passagedata pid="19" name="Artist Talk" tags="" position="1700,1150" size="100,100">Shima suspects that this might be Corinne&#39;s final heist.
-
-Ai comments that she would switch out the vase.
-
-They go to investigate the security room.</tw-passagedata><tw-passagedata pid="20" name="Security Room" tags="" position="1825,1150" size="100,100">Ai plays around with the security cameras.
-
-If Shima does not stop her, she accidentally cuts off the lights. The museum changes the wiring, causing Corinne to later cut the wrong wire.
-
-If Shima does stop her, they will know where to go when the lights go out</tw-passagedata><tw-passagedata pid="21" name="Endings" tags="" position="1950,1150" size="100,100">BAD END: If the vase is not chosen as the stolen item, Corinne gets away with everything.
+You smile politely, keeping the guard&#39;s words in mind before returning to look around the [[museum|Museum]].</tw-passagedata><tw-passagedata pid="19" name="Endings" tags="" position="2150,1125" size="100,100">Rough Draft of Endings
+BAD END: If the vase is not chosen as the stolen item, Corinne gets away with everything.
 
 NORMAL END: Corinne gets away, but Shima catches her license plate. (Investigation B: Ai does not cut the power, and they do not discover that there is a fake vase after the lights go out until it is too late. Ai does not chase after Corinne because Shima does not know she is fast.)
 
 GOOD END: Corinne is caught by Shima, Ai is not fired, and Shima decides to go back to working alone. (Investigation B: Shima leads the way on the day of the heist (I can&#39;t trust security to do their job). They catch Corinne attempting to replace the vase, scaring her into dropping it. At low friendship, Ai confesses to breaking the vase and is fired. At high friendship, Shima confesses to breaking the vase and loses her promotion/position.)
 
-BEST END: Corinne is caught by Ai who runs after her, and Shima decides to stay as Ai&#39;s partner, if she is willing to let her. (Investigation B: Ai cuts out the power and Shima learns that Ai is fast after getting ice cream with her, a scene that requires a high enough friendship. When following Corinne on the heist day, Shima lets Ai lead the way (let security do their job) and Shima notices a replica vase carried by someone.)</tw-passagedata></tw-storydata>
+BEST END: Corinne is caught by Ai who runs after her, and Shima decides to stay as Ai&#39;s partner, if she is willing to let her. (Investigation B: Ai cuts out the power and Shima learns that Ai is fast after getting ice cream with her, a scene that requires a high enough friendship. When following Corinne on the heist day, Shima lets Ai lead the way (let security do their job) and Shima notices a replica vase carried by someone.)</tw-passagedata><tw-passagedata pid="20" name="Security Room" tags="" position="1700,1150" size="100,100">&quot;Behind the scenes&quot; turns out to be a security room filled with cameras of various locations in the museum.
+
+(text-colour:#FFC7E2)[&quot;So, partner in crime, have you found something to steal? For pretend, of course.&quot;] Detective Ai looks around her to make sure no one is listening.
+
+(if:$artistTalk)[(link:&quot;&#39;A vase, actually.&#39;&quot;)[(if:$friendship &gt; 3 and $auctionNight)[(go-to:&quot;Perfect Plan&quot;)](else:)[(go-to:&quot;Plan&quot;)]]]
+[[&#39;Not really.&#39;|No Plan]]</tw-passagedata><tw-passagedata pid="21" name="Artist 2-1" tags="" position="1575,1250" size="100,100">(set:$artistTalk to true)(text-colour:#C7F9FF)[&quot;Excuse me, do you have a moment?&quot;]
+
+She turns, startled for a moment before smiling kindly.
+
+(text-colour:#D5FFC7)[&quot;Why, hello there! I suppose you&#39;re here to ask me about the vase I created? It&#39;s my most prized work.&quot;]
+
+You (link:&quot;look at the vase.&quot;)[look at the vase.
+
+It is adorned with a countless number of jewels and looks rather expensive. In other words, the perfect thing to steal.
+
+(text-colour:#C7F9FF)[//Curses, now I&#39;m thinking like Ai.//]
+
+As if on cue, you hear someone yell, (text-colour:#FFC7E2)[&quot;Shima, over here!&quot;]
+
+-(link:&quot;Leave and talk to Detective Ai&quot;)[(set: $friendship to $friendship + 1)(go-to: &quot;Museum&quot;)]
+-[[Ignore her for a moment and ask the artist about her work|Artist 2-2]]]</tw-passagedata><tw-passagedata pid="22" name="Artist 2-2" tags="" position="1575,1350" size="100,100">(set: $friendship to $friendship - 1)(text-colour:#C7F9FF)[&quot;Do you mind telling me about the vase in that case?&quot;]
+
+(text-colour:#D5FFC7)[&quot;Of course! This vase is—&quot;]
+
+(link:&quot;A voice interrupts her.&quot;)[(text-colour:#FFC7E2)[&quot;Shima, don&#39;t just ignore me!&quot;]
+
+Detective Ai looks hurt for once, and the artist simply smiles and leaves the two of you alone.
+
+(text-colour:#FFC7E2)[&quot;If you aren&#39;t too busy ignoring me, the guy from the exhibit said we could take a peek [[behind the scenes|Security Room]].&quot;]]</tw-passagedata><tw-passagedata pid="23" name="Perfect Plan" tags="" position="1825,1050" size="100,100">(set: $plan to 0)(text-colour:#C7F9FF)[&quot;A vase, actually.&quot;]
+
+(text-colour:#FFC7E2)[&quot;Look at you, going after the most expensive stuff! You would be a very confident thief.&quot;]
+
+A confident thief, (link:&quot;huh?&quot;)[huh?
+
+Ai&#39;s words remind you of a case from years ago, one that could have only been done by someone so arrogant yet intelligent enough where a painting had been replaced with a replica on the night of its grand reveal.
+
+All of it had been done after the lights had been cut for a brief moment.
+
+Your eyes wander to the [[red cord|Red Cord]] snaking from under the door and to the generator.]</tw-passagedata><tw-passagedata pid="24" name="No Plan" tags="" position="1825,1250" size="100,100">(set: $plan to 2)
+(This route hasn&#39;t been written. You will need max friendship with Ai to get to the currently written route.)</tw-passagedata><tw-passagedata pid="25" name="Plan" tags="" position="1825,1150" size="100,100">(set: $plan to 1)
+(This route hasn&#39;t been written. You will need max friendship with Ai to get to the currently written route.)</tw-passagedata><tw-passagedata pid="26" name="Red Cord" tags="" position="1950,1050" size="100,100">Seeing the cord, you decide to reveal your (link:&quot;hypothetical plan to Ai.&quot;)[hypothetical plan to Ai.
+
+(text-colour:#C7F9FF)[&quot;If I were a hypothetical thief, I would cut out the power to swap the vase with a replica during auction night. Which, coincidentally, is tomorrow.&quot;]
+
+Ai shoots you a smug, knowing look and calls for the guard to rewire the power supply. Although he looks rather reluctant after the two of you explain your radical plan, he agrees to separate the power supply for auction night and instead connect the cord to the wifi.
+
+To not alert Corinne that something is wrong, you decide not to increase security and instead lie in wait for your prey to fall into your trap. After all, you need to catch her red-handed so that you have the grounds to arrest her.
+
+All that&#39;s left is to [[wait|Auction Night]] for the wifi to go out on auction night.]</tw-passagedata><tw-passagedata pid="27" name="Auction Night" tags="" position="1075,1550" size="100,100">{(if: $plan is 0)[
+It is the night of the auction, and you and Ai decide to blend into the crowd, checking your phones to wait for the wifi to disconnect.
+&lt;br&gt;&lt;br&gt;
+As time passes, you begin to feel anxious and wonder if your plan has gone wrong.
+&lt;br&gt;&lt;br&gt;
+(text-colour:#FFC7E2)[&quot;Relax, Shima. Everything will go as we planned. Trust me!&quot;]
+&lt;br&gt;&lt;br&gt;
+-[[Trust Ai|Wifi]]&lt;br&gt;
+-[[Trust your instincts|Broken Vase]]
+]}</tw-passagedata><tw-passagedata pid="28" name="Wifi" tags="" position="1200,1450" size="100,100">Sure enough, the wifi suddenly disconnects, and you and Ai make your way to the security room as soon as possible to (link:&quot;catch Corinne in the act.&quot;)[catch Corinne in the act.
+
+Unfortunately, Corinne has already made her way out of the security room, and when you turn to look at the security cameras, you realize that they have all gone out because they were connected to the wifi.
+
+The pedestal where the vase once sat is (link:&quot;empty.&quot;)[empty.
+
+(text-colour:#C7F9FF)[//Is this what I get for trusting Ai?//]
+
+(text-colour:#FFC7E2)[&quot;Shima, I think I know where she went. I know it&#39;ll sound crazy, but you need to trust me.&quot;]
+
+The serious look on Ai&#39;s normally happy-go-lucky face (link:&quot;brings you back to reality.&quot;)[brings you back to reality.
+
+Maybe it really is time to [[trust|Best End 1]] someone.]]]</tw-passagedata><tw-passagedata pid="29" name="Broken Vase" tags="" position="1200,1550" size="100,100">(This route hasn&#39;t been written.)
+
+(Shima will jump the gun and enter the security room, startling Corinne who will make a last minute attempt to take the vase and breaking it in the process. Although Corinne is arrested, Ai will take the blame for breaking the vase and is fired.)
+
+[[Go Back|Auction Night]]</tw-passagedata><tw-passagedata pid="30" name="Best End 1" tags="" position="1325,1450" size="100,100">Under Ai&#39;s orders, you make your way to the back of the museum where you find a van waiting, its engine on but driver seat empty. Unholstering your weapon, you stand, (link:&quot;waiting for your partner to arrive.&quot;)[waiting for your partner to arrive.
+
+And like she promised, she does.
+
+The back doors burst open and out stumbles Corinne, who freezes in her tracks, vase in her hands and her eyes wide open in shock. The person who follows after her makes you falter for a moment.
+
+(link:&quot;Now it is time for you to be shocked.&quot;)[Standing before you is...//you//?
+
+&quot;Run, Remi!&quot;
+
+In your moment of hesitation, Corinne pushes //you// forward, and before you can register what is happening, //you// escape to the van, revving the engine and [[disappearing into the night.|Best End 2]]]]</tw-passagedata><tw-passagedata pid="31" name="Best End 2" tags="" position="1450,1450" size="100,100">The next events go by in a blur, and you vaguely remember putting the handcuffs around Corinne&#39;s wrist, leading her to a police car, and taking a seat next to Ai.
+
+A worried voice breaks your trance.
+
+(text-colour:#FFC7E2)[&quot;Shima? Is everything alright?&quot;]
+
+(link:&quot;You want to open up to Ai.&quot;)[(link:&quot;But you shouldn&#39;t show any weakness.&quot;)[(link:&quot;You shouldn&#39;t trust anyone.&quot;)[(link:&quot;But you should trust Ai.&quot;)[And you do.
+
+Best End: My Partner, My Problem
+
+[[Restart|Intro]]]]]]</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
