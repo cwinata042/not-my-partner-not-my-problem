@@ -162,12 +162,12 @@ The security guard lets out a laugh at the absurdity of the idea.
 
 (text-colour:#D5FFC7)[&quot;Rob should have more information about it. He&#39;s the ][[guy over there|Exhibit Worker]](text-colour:#D5FFC7)[.&quot;]
 
-You smile politely, keeping the guard&#39;s words in mind before returning to look around the [[museum|Museum]].</tw-passagedata><tw-passagedata pid="19" name="Security Room" tags="" position="1700,1150" size="100,100">&quot;Behind the scenes&quot; turns out to be a security room filled with cameras of various locations in the museum.
-
+You smile politely, keeping the guard&#39;s words in mind before returning to look around the [[museum|Museum]].</tw-passagedata><tw-passagedata pid="19" name="Security Room" tags="" position="1700,1150" size="100,100">{&quot;Behind the scenes&quot; turns out to be a security room filled with cameras of various locations in the museum.
+&lt;br&gt;&lt;br&gt;
 (text-colour:#FFC7E2)[&quot;So, partner in crime, have you found something to steal? For pretend, of course.&quot;] Detective Ai looks around her to make sure no one is listening.
-
-(if:$artistTalk)[(link:&quot;&#39;A vase, actually.&#39;&quot;)[(if:$friendship &gt; 3 and $auctionNight)[(go-to:&quot;Perfect Plan&quot;)](else:)[(go-to:&quot;Plan&quot;)]]]
-[[&#39;Not really.&#39;|No Plan]]</tw-passagedata><tw-passagedata pid="20" name="Artist 2-1" tags="" position="1575,1250" size="100,100">(text-colour:#C7F9FF)[&quot;Excuse me, do you have a moment?&quot;]
+&lt;br&gt;
+(if:$artistTalk)[&lt;br&gt;(link:&quot;&#39;A vase, actually.&#39;&quot;)[(if:$friendship &gt; 3 and $auctionNight)[(go-to:&quot;Perfect Plan&quot;)](else:)[(go-to:&quot;Plan&quot;)]]]
+[[&lt;br&gt;&#39;Not really.&#39;|No Plan]]}</tw-passagedata><tw-passagedata pid="20" name="Artist 2-1" tags="" position="1575,1250" size="100,100">(text-colour:#C7F9FF)[&quot;Excuse me, do you have a moment?&quot;]
 
 She turns, startled for a moment before smiling kindly.
 
@@ -208,7 +208,7 @@ A moment of silence (link:&quot;passes.&quot;)[passes.
 
 Detective Ai looks to the side sheepishly and says, (text-colour:#FFC7E2)[&quot;To tell you the truth, I haven&#39;t been doing any sleuthing either, so I don&#39;t know what to do.&quot;]
 
-A part of you wishes that you had investigated the cold case as you head home[[empty-handed|Bad End 2]].]</tw-passagedata><tw-passagedata pid="24" name="Plan" tags="" position="1825,1150" size="100,100">(set: $plan to 1)(text-colour:#C7F9FF)[&quot;A vase, actually.&quot;]
+A part of you wishes that you had investigated the cold case as you head home [[empty-handed|Bad End 2]].]</tw-passagedata><tw-passagedata pid="24" name="Plan" tags="" position="1825,1150" size="100,100">(set: $plan to 1)(text-colour:#C7F9FF)[&quot;A vase, actually.&quot;]
 
 (text-colour:#FFC7E2)[&quot;Oh, like that vase from before? But I thought they&#39;re moving the real one to the back on auction night?&quot;]
 
@@ -451,7 +451,7 @@ Startled by Detective Ai&#39;s strange analogy, the woman does not slam the door
 (text-color:#D5FFC7)[&quot;This...is about that thief, isn&#39;t it? I knew I should have told the police the truth...&quot;]
 
 -[[Demand for more information|Maid Interview A-2]]
--(link:&quot;Let Detective Ai handle things&quot;)[(set: $friendship to $friendship + 1)(go-to:&quot;Maid Interview A-2&quot;)]</tw-passagedata><tw-passagedata pid="52" name="Bad End 2" tags="To-Write" position="1325,1850" size="100,100">With no information on how to stop Corinne, you wake up on December 29th with a sinking feeling in your heart. The heist had been set for Decemeber 28th, and all you had done was lie on your bed, waiting for the bad news.
+-(link:&quot;Let Detective Ai handle things&quot;)[(set: $friendship to $friendship + 1)(go-to:&quot;Maid Interview A-2&quot;)]</tw-passagedata><tw-passagedata pid="52" name="Bad End 2" tags="To-Write" position="1325,1850" size="100,100">With no information on how to stop Corinne, you wake up on December 29th with a sinking feeling in your heart. The heist had been set for December 28th, and all you had done was lie on your bed, waiting for the bad news.
 
 You (link:&quot;turn on the TV.&quot;)[turn on the TV.
 
